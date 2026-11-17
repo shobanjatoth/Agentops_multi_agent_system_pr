@@ -1,0 +1,178 @@
+{
+  "total_scenarios": 11,
+  "task_success_rate_pct": 90.9,
+  "failed_scenarios": 1,
+  "human_approval_gate_rate_pct": 36.4,
+  "critic_retry_rate_pct": 9.1,
+  "expectations_checked": 9,
+  "expectations_met": 9,
+  "avg_wall_clock_ms": 45.62,
+  "p95_wall_clock_ms": 49.37,
+  "scenarios": [
+    {
+      "name": "bug_low_risk_comment",
+      "status": "done",
+      "requires_approval": false,
+      "risk_score": 0.15,
+      "revision_count": 0,
+      "wall_clock_ms": 49.37,
+      "node_latencies_ms": {
+        "triage": 0.0,
+        "research": 0.01,
+        "action": 6.0,
+        "critic": 0.5
+      },
+      "expectation_met": true
+    },
+    {
+      "name": "feature_request",
+      "status": "done",
+      "requires_approval": false,
+      "risk_score": 0.15,
+      "revision_count": 0,
+      "wall_clock_ms": 40.65,
+      "node_latencies_ms": {
+        "triage": 0.0,
+        "research": 0.02,
+        "action": 6.0,
+        "critic": 0.5
+      },
+      "expectation_met": true
+    },
+    {
+      "name": "question_docs",
+      "status": "done",
+      "requires_approval": false,
+      "risk_score": 0.1,
+      "revision_count": 0,
+      "wall_clock_ms": 41.25,
+      "node_latencies_ms": {
+        "triage": 0.0,
+        "research": 0.01,
+        "action": 6.0,
+        "critic": 0.5
+      },
+      "expectation_met": true
+    },
+    {
+      "name": "critical_outage",
+      "status": "awaiting_approval",
+      "requires_approval": true,
+      "risk_score": 0.35,
+      "revision_count": 0,
+      "wall_clock_ms": 42.36,
+      "node_latencies_ms": {
+        "triage": 0.0,
+        "research": 0.02,
+        "action": 6.0,
+        "critic": 0.5
+      },
+      "expectation_met": true
+    },
+    {
+      "name": "payment_bug_high_priority",
+      "status": "awaiting_approval",
+      "requires_approval": true,
+      "risk_score": 0.35,
+      "revision_count": 0,
+      "wall_clock_ms": 44.15,
+      "node_latencies_ms": {
+        "triage": 0.0,
+        "research": 0.02,
+        "action": 6.0,
+        "critic": 0.5
+      },
+      "expectation_met": true
+    },
+    {
+      "name": "send_email_always_reviewed",
+      "status": "done",
+      "requires_approval": false,
+      "risk_score": 0.1,
+      "revision_count": 0,
+      "wall_clock_ms": 40.92,
+      "node_latencies_ms": {
+        "triage": 2.0,
+        "research": 0.01,
+        "action": 6.0,
+        "critic": 0.5
+      },
+      "expectation_met": null
+    },
+    {
+      "name": "malformed_llm_output",
+      "status": "done",
+      "requires_approval": false,
+      "risk_score": 0.15,
+      "revision_count": 0,
+      "wall_clock_ms": 40.57,
+      "node_latencies_ms": {
+        "triage": 0.0,
+        "research": 0.01,
+        "action": 6.0,
+        "critic": 0.5
+      },
+      "expectation_met": true
+    },
+    {
+      "name": "delete_resource_always_reviewed",
+      "status": "awaiting_approval",
+      "requires_approval": true,
+      "risk_score": 0.35,
+      "revision_count": 0,
+      "wall_clock_ms": 41.29,
+      "node_latencies_ms": {
+        "triage": 2.0,
+        "research": 0.01,
+        "action": 6.0,
+        "critic": 0.5
+      },
+      "expectation_met": true
+    },
+    {
+      "name": "close_stale_issue",
+      "status": "done",
+      "requires_approval": false,
+      "risk_score": 0.15,
+      "revision_count": 0,
+      "wall_clock_ms": 40.62,
+      "node_latencies_ms": {
+        "triage": 0.0,
+        "research": 0.01,
+        "action": 6.0,
+        "critic": 0.5
+      },
+      "expectation_met": true
+    },
+    {
+      "name": "prod_target_bumps_risk",
+      "status": "awaiting_approval",
+      "requires_approval": true,
+      "risk_score": 0.35,
+      "revision_count": 0,
+      "wall_clock_ms": 42.88,
+      "node_latencies_ms": {
+        "triage": 2.0,
+        "research": 0.01,
+        "action": 6.0,
+        "critic": 0.5
+      },
+      "expectation_met": true
+    },
+    {
+      "name": "unfixable_low_quality_output",
+      "status": "failed",
+      "requires_approval": false,
+      "risk_score": 0.15,
+      "revision_count": 3,
+      "wall_clock_ms": 77.79,
+      "node_latencies_ms": {
+        "triage": 2.0,
+        "research": 0.01,
+        "action": 6.0,
+        "critic": 0.5
+      },
+      "expectation_met": null
+    }
+  ]
+}

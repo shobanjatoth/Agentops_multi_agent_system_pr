@@ -1,0 +1,87 @@
+# # Render.com blueprint — free tier deployment for AgentOps
+# # Usage: push this repo to GitHub, then on render.com choose
+# # "New +" -> "Blueprint" -> connect the repo. Render reads this file
+# # automatically and provisions both services.
+
+# services:
+#   - type: web
+#     name: agentops-api
+#     env: docker
+#     dockerfilePath: ./Dockerfile
+#     dockerCommand: sh -c "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-10000}"
+#     healthCheckPath: /health
+#     plan: free
+#     envVars:
+#       - key: GROQ_API_KEY
+#         sync: false
+#       - key: GROQ_MODEL
+#         value: openai/gpt-oss-120b
+#       - key: AGENTOPS_DB_PATH
+#         value: /app/data/agentops.db
+#       - key: AUTO_APPROVE_RISK_THRESHOLD
+#         value: "0.3"
+#       - key: REDIS_URL
+#         sync: false  # optional — leave unset to use the in-memory fallback
+#       - key: LANGCHAIN_TRACING_V2
+#         value: "false"
+#       - key: LANGCHAIN_API_KEY
+#         sync: false
+#       - key: LANGCHAIN_PROJECT
+#         value: agentops
+#     disk:
+#       name: agentops-data
+#       mountPath: /app/data
+#       sizeGB: 1
+
+#   - type: web
+#     name: agentops-dashboard
+#     env: docker
+#     dockerfilePath: ./Dockerfile
+#     dockerCommand: sh -c "streamlit run dashboard/dashboard_app.py --server.address 0.0.0.0 --server.port ${PORT:-10000}"
+#     plan: free
+#     envVars:
+#       - key: AGENTOPS_DB_PATH
+#         value: /app/data/agentops.db
+#     disk:
+#       name: agentops-data
+#       mountPath: /app/data
+#       sizeGB: 1
+
+
+
+
+
+
+services:
+  - type: web
+    name: agentops-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    autoDeploy: false
+    healthCheckPath: /health
+
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+
+      - key: GROQ_MODEL
+        value: openai/gpt-oss-120b
+
+      - key: AGENTOPS_DB_PATH
+        value: /tmp/agentops.db
+
+      - key: AUTO_APPROVE_RISK_THRESHOLD
+        value: "0.3"
+
+      - key: REDIS_URL
+        sync: false
+
+      - key: LANGCHAIN_TRACING_V2
+        value: "false"
+
+      - key: LANGCHAIN_API_KEY
+        sync: false
+
+      - key: LANGCHAIN_PROJECT
+        value: agentops

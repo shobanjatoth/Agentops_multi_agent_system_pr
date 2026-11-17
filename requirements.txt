@@ -1,0 +1,16 @@
+
+
+langgraph
+langchain-core
+langsmith
+redis
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+pandas
+httpx
+pytest
+pytest-asyncio
+sse-starlette
+streamlit
