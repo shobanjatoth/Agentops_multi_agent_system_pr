@@ -238,8 +238,13 @@ def _mark_failed_node(state: AgentState) -> AgentState:
         ),
     }
 
-
 def _route_after_critic(state: AgentState) -> str:
+    # Never allow an invalid Action Agent proposal through.
+    if not state.get("action_passed", False):
+        if not state.get("critic_passed", False) and should_retry(state):
+            return "retry"
+        return "fail"
+
     if state.get("critic_passed"):
         return "gate"
 

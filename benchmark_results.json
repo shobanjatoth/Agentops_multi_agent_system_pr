@@ -6,8 +6,8 @@
   "critic_retry_rate_pct": 9.1,
   "expectations_checked": 9,
   "expectations_met": 9,
-  "avg_wall_clock_ms": 45.62,
-  "p95_wall_clock_ms": 49.37,
+  "avg_wall_clock_ms": 71.19,
+  "p95_wall_clock_ms": 81.41,
   "scenarios": [
     {
       "name": "bug_low_risk_comment",
@@ -15,10 +15,10 @@
       "requires_approval": false,
       "risk_score": 0.15,
       "revision_count": 0,
-      "wall_clock_ms": 49.37,
+      "wall_clock_ms": 81.41,
       "node_latencies_ms": {
         "triage": 0.0,
-        "research": 0.01,
+        "research": 0.02,
         "action": 6.0,
         "critic": 0.5
       },
@@ -30,7 +30,7 @@
       "requires_approval": false,
       "risk_score": 0.15,
       "revision_count": 0,
-      "wall_clock_ms": 40.65,
+      "wall_clock_ms": 53.0,
       "node_latencies_ms": {
         "triage": 0.0,
         "research": 0.02,
@@ -43,13 +43,13 @@
       "name": "question_docs",
       "status": "done",
       "requires_approval": false,
-      "risk_score": 0.1,
+      "risk_score": 0.0,
       "revision_count": 0,
-      "wall_clock_ms": 41.25,
+      "wall_clock_ms": 52.95,
       "node_latencies_ms": {
         "triage": 0.0,
-        "research": 0.01,
-        "action": 6.0,
+        "research": 0.02,
+        "action": 0.0,
         "critic": 0.5
       },
       "expectation_met": true
@@ -60,7 +60,7 @@
       "requires_approval": true,
       "risk_score": 0.35,
       "revision_count": 0,
-      "wall_clock_ms": 42.36,
+      "wall_clock_ms": 57.2,
       "node_latencies_ms": {
         "triage": 0.0,
         "research": 0.02,
@@ -75,7 +75,7 @@
       "requires_approval": true,
       "risk_score": 0.35,
       "revision_count": 0,
-      "wall_clock_ms": 44.15,
+      "wall_clock_ms": 56.98,
       "node_latencies_ms": {
         "triage": 0.0,
         "research": 0.02,
@@ -90,10 +90,10 @@
       "requires_approval": false,
       "risk_score": 0.1,
       "revision_count": 0,
-      "wall_clock_ms": 40.92,
+      "wall_clock_ms": 67.84,
       "node_latencies_ms": {
         "triage": 2.0,
-        "research": 0.01,
+        "research": 0.02,
         "action": 6.0,
         "critic": 0.5
       },
@@ -105,7 +105,7 @@
       "requires_approval": false,
       "risk_score": 0.15,
       "revision_count": 0,
-      "wall_clock_ms": 40.57,
+      "wall_clock_ms": 62.5,
       "node_latencies_ms": {
         "triage": 0.0,
         "research": 0.01,
@@ -120,10 +120,10 @@
       "requires_approval": true,
       "risk_score": 0.35,
       "revision_count": 0,
-      "wall_clock_ms": 41.29,
+      "wall_clock_ms": 61.73,
       "node_latencies_ms": {
         "triage": 2.0,
-        "research": 0.01,
+        "research": 0.02,
         "action": 6.0,
         "critic": 0.5
       },
@@ -135,10 +135,10 @@
       "requires_approval": false,
       "risk_score": 0.15,
       "revision_count": 0,
-      "wall_clock_ms": 40.62,
+      "wall_clock_ms": 72.82,
       "node_latencies_ms": {
         "triage": 0.0,
-        "research": 0.01,
+        "research": 0.04,
         "action": 6.0,
         "critic": 0.5
       },
@@ -150,7 +150,7 @@
       "requires_approval": true,
       "risk_score": 0.35,
       "revision_count": 0,
-      "wall_clock_ms": 42.88,
+      "wall_clock_ms": 64.49,
       "node_latencies_ms": {
         "triage": 2.0,
         "research": 0.01,
@@ -165,10 +165,10 @@
       "requires_approval": false,
       "risk_score": 0.15,
       "revision_count": 3,
-      "wall_clock_ms": 77.79,
+      "wall_clock_ms": 152.19,
       "node_latencies_ms": {
         "triage": 2.0,
-        "research": 0.01,
+        "research": 0.02,
         "action": 6.0,
         "critic": 0.5
       },

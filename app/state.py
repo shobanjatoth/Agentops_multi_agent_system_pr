@@ -46,6 +46,7 @@ class AgentState(TypedDict, total=False):
     # ---- action ----
     proposed_action: dict[str, Any]  # e.g. {"type": "post_comment", "body": "..."}
     risk_score: float  # 0.0 (safe) - 1.0 (dangerous)
+    action_passed: bool
 
     # ---- critic ----
     critic_passed: bool
