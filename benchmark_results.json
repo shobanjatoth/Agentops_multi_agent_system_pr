@@ -6,8 +6,8 @@
   "critic_retry_rate_pct": 9.1,
   "expectations_checked": 9,
   "expectations_met": 9,
-  "avg_wall_clock_ms": 69.7,
-  "p95_wall_clock_ms": 76.31,
+  "avg_wall_clock_ms": 68.03,
+  "p95_wall_clock_ms": 89.03,
   "scenarios": [
     {
       "name": "bug_low_risk_comment",
@@ -15,10 +15,10 @@
       "requires_approval": false,
       "risk_score": 0.15,
       "revision_count": 0,
-      "wall_clock_ms": 76.31,
+      "wall_clock_ms": 87.6,
       "node_latencies_ms": {
         "triage": 0.0,
-        "research": 0.02,
+        "research": 0.04,
         "action": 6.0,
         "critic": 0.5
       },
@@ -30,7 +30,7 @@
       "requires_approval": false,
       "risk_score": 0.15,
       "revision_count": 0,
-      "wall_clock_ms": 54.07,
+      "wall_clock_ms": 64.08,
       "node_latencies_ms": {
         "triage": 0.0,
         "research": 0.02,
@@ -45,7 +45,7 @@
       "requires_approval": false,
       "risk_score": 0.0,
       "revision_count": 0,
-      "wall_clock_ms": 65.34,
+      "wall_clock_ms": 65.12,
       "node_latencies_ms": {
         "triage": 0.0,
         "research": 0.02,
@@ -60,7 +60,7 @@
       "requires_approval": true,
       "risk_score": 0.35,
       "revision_count": 0,
-      "wall_clock_ms": 52.08,
+      "wall_clock_ms": 64.7,
       "node_latencies_ms": {
         "triage": 0.0,
         "research": 0.02,
@@ -75,10 +75,10 @@
       "requires_approval": true,
       "risk_score": 0.35,
       "revision_count": 0,
-      "wall_clock_ms": 64.28,
+      "wall_clock_ms": 54.98,
       "node_latencies_ms": {
         "triage": 0.0,
-        "research": 0.02,
+        "research": 0.01,
         "action": 6.0,
         "critic": 0.5
       },
@@ -90,7 +90,7 @@
       "requires_approval": false,
       "risk_score": 0.1,
       "revision_count": 0,
-      "wall_clock_ms": 64.53,
+      "wall_clock_ms": 55.2,
       "node_latencies_ms": {
         "triage": 2.0,
         "research": 0.02,
@@ -105,7 +105,7 @@
       "requires_approval": false,
       "risk_score": 0.15,
       "revision_count": 0,
-      "wall_clock_ms": 59.46,
+      "wall_clock_ms": 54.91,
       "node_latencies_ms": {
         "triage": 0.0,
         "research": 0.02,
@@ -120,10 +120,10 @@
       "requires_approval": true,
       "risk_score": 0.35,
       "revision_count": 0,
-      "wall_clock_ms": 74.05,
+      "wall_clock_ms": 58.79,
       "node_latencies_ms": {
         "triage": 2.0,
-        "research": 0.03,
+        "research": 0.01,
         "action": 6.0,
         "critic": 0.5
       },
@@ -135,10 +135,10 @@
       "requires_approval": false,
       "risk_score": 0.15,
       "revision_count": 0,
-      "wall_clock_ms": 72.47,
+      "wall_clock_ms": 60.04,
       "node_latencies_ms": {
         "triage": 0.0,
-        "research": 0.04,
+        "research": 0.03,
         "action": 6.0,
         "critic": 0.5
       },
@@ -150,7 +150,7 @@
       "requires_approval": true,
       "risk_score": 0.35,
       "revision_count": 0,
-      "wall_clock_ms": 66.3,
+      "wall_clock_ms": 93.84,
       "node_latencies_ms": {
         "triage": 2.0,
         "research": 0.02,
@@ -165,7 +165,7 @@
       "requires_approval": false,
       "risk_score": 0.15,
       "revision_count": 3,
-      "wall_clock_ms": 117.8,
+      "wall_clock_ms": 89.03,
       "node_latencies_ms": {
         "triage": 2.0,
         "research": 0.01,

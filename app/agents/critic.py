@@ -186,9 +186,16 @@ VALID_ACTION_TYPES = {
 }
 
 REPO_PATTERN = re.compile(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+")
+
 COMMENT_TARGET_PATTERN = re.compile(
-    r"(?:[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+#\d+|[A-Za-z0-9][A-Za-z0-9_-]{0,62})"
+    r"(?:"
+    r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+#([1-9]\d*)"
+    r"|[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+"
+    r"|[A-Za-z0-9][A-Za-z0-9_-]{0,62}"
+    r")"
 )
+
+
 SLACK_CHANNEL_PATTERN = re.compile(r"#[A-Za-z0-9_-]+")
 
 REQUIRED_PR_FIELDS = ("repo", "title", "head", "base")
