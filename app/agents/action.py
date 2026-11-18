@@ -1638,6 +1638,14 @@ Rules:
 
 
 INFORMATIONAL_PATTERNS = (
+    r"\breview\b",
+r"\bidentify\b",
+r"\banalyze\b",
+r"\banalyse\b",
+r"\baudit\b",
+r"\binspect\b",
+r"\bassess\b",
+r"\bevaluate\b",
     r"\bresearch\b",
     r"\binvestigate\b",
     r"\bexplain\b",
@@ -1705,17 +1713,44 @@ def _requests_action(description: str) -> bool:
     return False
 
 
+
+def _explicitly_forbids_external_actions(description: str) -> bool:
+    """Detect instructions that explicitly prohibit external side effects."""
+    patterns = (
+        r"\bno external actions?\b",
+        r"\bwithout (?:taking|performing|executing) external actions?\b",
+        r"\b(?:read[- ]only|analysis[- ]only)\b",
+        (
+            r"\b(?:do not|don't|dont|never|must not|should not|shouldn't)"
+            r"\b.{0,160}\b(?:execute|perform|take|trigger|carry out)"
+            r"\b.{0,40}\bexternal actions?\b"
+        ),
+    )
+
+    return any(
+        re.search(pattern, description, re.IGNORECASE | re.DOTALL)
+        for pattern in patterns
+    )
+
+
+
+
+
 def _is_informational_task(state: AgentState) -> bool:
     """
-    Identify explicit informational requests.
+    Identify informational and explicitly read-only requests.
 
-    A triage category by itself must never bypass the action workflow.
-    Operational descriptions must continue through the Critic.
+    An explicit prohibition on external actions takes priority
+    over triage category and operational keywords.
     """
     description = state.get("description", "")
 
     if not isinstance(description, str) or not description.strip():
         return False
+
+    # Explicit read-only instructions always take priority.
+    if _explicitly_forbids_external_actions(description):
+        return True
 
     if _requests_action(description):
         return False
@@ -1731,6 +1766,39 @@ def _is_informational_task(state: AgentState) -> bool:
     )
 
     return is_informational and not is_operational
+
+
+
+
+
+
+
+# def _is_informational_task(state: AgentState) -> bool:
+#     """
+#     Identify explicit informational requests.
+
+#     A triage category by itself must never bypass the action workflow.
+#     Operational descriptions must continue through the Critic.
+#     """
+#     description = state.get("description", "")
+
+#     if not isinstance(description, str) or not description.strip():
+#         return False
+
+#     if _requests_action(description):
+#         return False
+
+#     is_informational = any(
+#         re.search(pattern, description, re.IGNORECASE)
+#         for pattern in INFORMATIONAL_PATTERNS
+#     )
+
+#     is_operational = any(
+#         re.search(pattern, description, re.IGNORECASE)
+#         for pattern in OPERATIONAL_PATTERNS
+#     )
+
+#     return is_informational and not is_operational
 
 
 def _fallback_action(state: AgentState) -> dict:
